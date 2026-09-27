@@ -1,0 +1,21 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+
+        int index = 0;
+
+        // Put all non-zero elements first
+        for (int i = 0; i < nums.length; i++) {
+
+            if (nums[i] != 0) {
+                nums[index] = nums[i];
+                index++;
+            }
+        }
+
+        // Put zeroes in the remaining positions
+        while (index < nums.length) {
+            nums[index] = 0;
+            index++;
+        }
+    }
+}
